@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6420479347929336886}
   - component: {fileID: 6420479347929336884}
   - component: {fileID: 6420479347929336885}
+  - component: {fileID: 5097514042516213068}
+  - component: {fileID: 3484384334308979116}
   m_Layer: 6
   m_Name: Rocket Launcher
   m_TagString: Untagged
@@ -3841,7 +3843,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 128
+      m_Bits: 384
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4881,3 +4883,29 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5097514042516213068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420479347929336887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b839d9fa484e644b5369319bdef57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 8908148819408736021, guid: 203b2cf4d6c6dfa419e030ede36ec81d, type: 3}
+--- !u!114 &3484384334308979116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420479347929336887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b2076b0c56ef94a8ee3b6aa778dff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2

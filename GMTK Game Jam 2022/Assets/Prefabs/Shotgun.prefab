@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1781965702762786440}
   - component: {fileID: 1781965702762786445}
   - component: {fileID: 1781965702762786443}
+  - component: {fileID: 2069029126626116181}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -4863,3 +4864,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2069029126626116181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781965702762786441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b2076b0c56ef94a8ee3b6aa778dff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2

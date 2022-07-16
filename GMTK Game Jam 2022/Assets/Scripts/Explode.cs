@@ -6,17 +6,32 @@ public class Explode : MonoBehaviour
 {
     [SerializeField] private GameObject explosion;
 
-    private List<ParticleCollisionEvent> collisionEvents;
     private GameObject exploded;
+    private ParticleSystem particles;
+    private List<ParticleCollisionEvent> collisionEvents;
 
     private void Start()
     {
-        collisionEvents = new List<ParticleCollisionEvent>();
+        particles = GetComponent<ParticleSystem>();
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        exploded = Instantiate(explosion, transform);
-        exploded.GetComponent<ParticleSystem>().Play();
+        if(this.name == "Grenade Launcher" && other.tag == "Enemy")
+        {
+            exploded = Instantiate(explosion);
+            exploded.transform.position = other.transform.position;
+            exploded.GetComponent<ParticleSystem>().Play();
+        }
+        else if(this.name == "Rocket Launcher")
+        {
+            collisionEvents = new List<ParticleCollisionEvent>();
+
+            ParticlePhysicsExtensions.GetCollisionEvents(particles, other, collisionEvents);
+
+            exploded = Instantiate(explosion);
+            exploded.transform.position = collisionEvents[0].intersection;
+            exploded.GetComponent<ParticleSystem>().Play();
+        }
     }
 }
