@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     private Animator animator;
 
     private bool dead = false;
+    private IEnumerator coroutine;
 
     private void Start()
     {
@@ -18,26 +19,51 @@ public class Health : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown("space"))
-            TakeDamage(1);
+        {
+            coroutine = ToggleTrueAndFalse(0.01f, "damage");
+            StartCoroutine(coroutine);
+
+        }
+
         if (Input.GetKeyDown("i"))
-            Heal(1);
+        {
+            coroutine = ToggleTrueAndFalse(0.01f, "heal");
+            StartCoroutine(coroutine);
+        }
     }
 
     public void TakeDamage(float damage)
     {
-        animator.ResetTrigger("damage");
-        animator.SetTrigger("damage");
+        animator.SetBool("heal", false);
+        animator.SetBool("damage", true);
         health -= damage;
         if (health <= 0)
+        {
+            /// careful danger zone health is negative without health = 0 here
             dead = true;
+        }
     }
 
     public void Heal(float heal)
     {
-        animator.ResetTrigger("heal");
-        animator.SetTrigger("heal");
+        animator.SetBool("damage", false);
+        animator.SetBool("heal", true);
         health += heal;
         if (health > 6)
             health = 6;
+    }
+
+    private IEnumerator ToggleTrueAndFalse(float waitTime, string param)
+    {
+        if(param == "damage")
+        {
+            TakeDamage(1);
+        }
+        else
+        {
+            Heal(1);
+        }
+        yield return new WaitForSeconds(waitTime);
+        animator.SetBool(param, false);
     }
 }
