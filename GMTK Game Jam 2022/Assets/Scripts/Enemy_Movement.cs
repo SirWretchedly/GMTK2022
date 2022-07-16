@@ -18,6 +18,7 @@ public class Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     public float SpaceBetween = 100.5f;
     private Vector2 offset = new Vector3(0, 0, 0);
+    public float rotationSpeed;
     void Update()
     {
         if(name == "Knight")
@@ -71,6 +72,10 @@ public class Enemy_Movement : MonoBehaviour
         if(collision.collider == Player)
         {
             Player.GetComponent<Health>().TakeDamage(1);
+        }
+        else
+        {
+            transform.RotateAround(Player.transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
         }
     }
 }
