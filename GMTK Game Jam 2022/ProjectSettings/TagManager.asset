@@ -5,11 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - RollingUp
+  - RolligRight
+  - RollingLeft
+  - RollingDown
+  - RollingRight
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Projectile

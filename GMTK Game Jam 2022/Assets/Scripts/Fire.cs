@@ -8,18 +8,24 @@ public class Fire : MonoBehaviour
 
     private ParticleSystem particles;
 
-    private void Start()
-    {
-        particles = GetComponent<ParticleSystem>();
-        particles.enableEmission = false;
-    }
-
     void Update()
     {
+        particles = GetComponentInChildren<ParticleSystem>();
+
+        if (key == "up")
+            particles.transform.rotation = Quaternion.Euler(-90, 0, 0);
+        else if (key == "left")
+            particles.transform.rotation = Quaternion.Euler(0, -90, 0);
+        else if (key == "right")
+            particles.transform.rotation = Quaternion.Euler(0, 90, 0);
+        else if (key == "down")
+            particles.transform.rotation = Quaternion.Euler(90, 0, 0);
+
         if (Input.GetKey(key))
         {
+            print(particles.name);
             particles.enableEmission = true;
-        }   
+        }
         else
             particles.enableEmission = false;
     }
