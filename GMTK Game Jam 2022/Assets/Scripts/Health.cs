@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        animator.ResetTrigger("damage");
         animator.SetTrigger("damage");
         health -= damage;
         if (health <= 0)
@@ -33,6 +34,7 @@ public class Health : MonoBehaviour
 
     public void Heal(float heal)
     {
+        animator.ResetTrigger("heal");
         animator.SetTrigger("heal");
         health += heal;
         if (health > 6)
