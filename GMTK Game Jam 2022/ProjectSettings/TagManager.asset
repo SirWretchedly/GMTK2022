@@ -10,6 +10,7 @@ TagManager:
   - RollingLeft
   - RollingDown
   - RollingRight
+  - Enemy
   layers:
   - Default
   - TransparentFX
