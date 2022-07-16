@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6420479347929336884, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: EmissionModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420479347929336886, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: m_RootOrder

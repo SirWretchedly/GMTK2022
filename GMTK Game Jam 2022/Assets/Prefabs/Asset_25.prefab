@@ -90,6 +90,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7349698473725073532}
     m_Modifications:
+    - target: {fileID: 1606948645167695699, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1606948645167695724, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: m_RootOrder
       value: 0

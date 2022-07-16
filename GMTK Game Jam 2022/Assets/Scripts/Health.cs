@@ -19,6 +19,8 @@ public class Health : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
             TakeDamage(1);
+        if (Input.GetKeyDown("i"))
+            Heal(1);
     }
 
     public void TakeDamage(float damage)
@@ -27,5 +29,13 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0)
             dead = true;
+    }
+
+    public void Heal(float heal)
+    {
+        animator.SetTrigger("heal");
+        health += heal;
+        if (health > 6)
+            health = 6;
     }
 }

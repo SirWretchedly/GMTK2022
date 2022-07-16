@@ -15,6 +15,8 @@ public class RollingController : MonoBehaviour
     private RollingSlot left;
     private RollingSlot right;
 
+    [SerializeField] private DetectBlock[] detectBlocks;
+
     void turnLeftUp(int stiva)
     {
         if (stiva == 1)
@@ -67,10 +69,9 @@ public class RollingController : MonoBehaviour
     {
         foreach (Transform child in x.transform)
         {
-            Destroy(child.gameObject);
+            StartCoroutine(DeleteDelay(child));
         }
         GameObject current = Instantiate(x.currentItem, x.transform);
-        print(current.name);
     }
 
     void Start()
@@ -84,7 +85,7 @@ public class RollingController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s") && !detectBlocks[2].isBlocked)
         {
             turnRightDown(2);
             up.currentItem = stiva2[0];
@@ -97,7 +98,7 @@ public class RollingController : MonoBehaviour
             functiaf(left);
             functiaf(right);
         }
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") && !detectBlocks[0].isBlocked)
         {
             turnLeftUp(2);
             up.currentItem = stiva2[0];
@@ -110,7 +111,7 @@ public class RollingController : MonoBehaviour
             functiaf(left);
             functiaf(right);
         }
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown("d") && !detectBlocks[1].isBlocked)
         {
             turnRightDown(1);
             up.currentItem = stiva2[0];
@@ -123,7 +124,7 @@ public class RollingController : MonoBehaviour
             functiaf(left);
             functiaf(right);
         }
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") && !detectBlocks[3].isBlocked)
         {
             turnLeftUp(1);
             up.currentItem = stiva2[0];
@@ -136,5 +137,14 @@ public class RollingController : MonoBehaviour
             functiaf(left);
             functiaf(right);
         }
+    }
+
+    IEnumerator DeleteDelay(Transform child)
+    {
+        child.GetComponent<SpriteRenderer>().enabled = false;
+        child.GetComponentInChildren<ParticleSystem>().enableEmission = false;
+        yield return new WaitForSeconds(5);
+        if(child != null)
+            Destroy(child.gameObject);
     }
 }
