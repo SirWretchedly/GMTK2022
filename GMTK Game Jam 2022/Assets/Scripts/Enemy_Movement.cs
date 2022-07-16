@@ -61,7 +61,7 @@ public class Enemy_Movement : MonoBehaviour
             offset = new Vector2(5, 0);
         yield return new WaitForSeconds(0.3f);
         offset = new Vector2(0, 0);
-        speed -= 1.5f;  
+        speed -= 1.5f;
         jump = false;
         yield return new WaitForSeconds(4);
         ready = true;
