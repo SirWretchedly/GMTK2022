@@ -22,6 +22,7 @@ public class Explode : MonoBehaviour
             exploded = Instantiate(explosion);
             exploded.transform.position = other.transform.position;
             exploded.GetComponent<ParticleSystem>().Play();
+            StartCoroutine(WaitAndKill(exploded));
         }
         else if(this.name == "Rocket Launcher")
         {
@@ -33,5 +34,11 @@ public class Explode : MonoBehaviour
             exploded.transform.position = collisionEvents[0].intersection;
             exploded.GetComponent<ParticleSystem>().Play();
         }
+    }
+
+    IEnumerator WaitAndKill(GameObject explosion)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(explosion);
     }
 }
