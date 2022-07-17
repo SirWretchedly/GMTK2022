@@ -10,6 +10,7 @@ public class Enemy_Movement : MonoBehaviour
     public float speed = 0.5f;
     private bool ready = true;
     private bool jump = false;
+    public float vision = 7;
 
     // Update is called once per frame
     public float SpaceBetween = 100.5f;
@@ -17,29 +18,31 @@ public class Enemy_Movement : MonoBehaviour
     public float rotationSpeed;
     void Update()
     {
-        if(name == "Knight")
-        {
-            if(ready)
+
+            if (name == "Knight")
             {
-                StartCoroutine(KnightJump());
+                if (ready)
+                {
+                    StartCoroutine(KnightJump());
+                }
+
+                if (jump)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Time.deltaTime * 10);
+                    transform.localScale = new Vector3(transform.localScale.x + Time.deltaTime, transform.localScale.y + Time.deltaTime, transform.localScale.z);
+                }
+                else if (transform.position.z > 0)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Time.deltaTime * 10);
+
+                }
+                if (!jump && transform.localScale.x > 1)
+                    transform.localScale = new Vector3(transform.localScale.x - Time.deltaTime, transform.localScale.y - Time.deltaTime, transform.localScale.z);
+
             }
+        
 
-            if(jump)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Time.deltaTime * 10);
-                transform.localScale = new Vector3(transform.localScale.x + Time.deltaTime, transform.localScale.y + Time.deltaTime, transform.localScale.z);
-            }       
-            else if(transform.position.z > 0)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Time.deltaTime * 10);
-                
-            }
-            if(!jump && transform.localScale.x > 1)
-                transform.localScale = new Vector3(transform.localScale.x - Time.deltaTime, transform.localScale.y - Time.deltaTime, transform.localScale.z);
-
-        }
-
-        if (Vector3.Distance(Player.position, transform.position) >= SpaceBetween)
+        if (Vector3.Distance(Player.position, transform.position) >= SpaceBetween && Vector2.Distance(transform.position, Player.transform.position) < vision)
         {
             Vector3 direction = new Vector3(Player.position.x - transform.position.x + offset.x, Player.position.y - transform.position.y + offset.y);
             transform.Translate(direction * Time.deltaTime * speed);
@@ -67,7 +70,7 @@ public class Enemy_Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Die")
         {
-            Player.GetComponent<Health>().TakeDamage(1);
+            StartCoroutine(Player.GetComponent<Health>().ToggleTrueAndFalse(0.1f, "damage"));
         }
         else
         {

@@ -139,6 +139,10 @@ PrefabInstance:
       value: Flamethrower
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: ShapeModule.angle
       value: 20
       objectReference: {fileID: 0}
@@ -161,6 +165,10 @@ PrefabInstance:
     - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: upgraded
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
+      propertyPath: upgraded
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}

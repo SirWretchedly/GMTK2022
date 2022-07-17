@@ -11,10 +11,11 @@ public class EnemyFire : MonoBehaviour
     private bool ready = true;
     public bool charge = false;
     public Vector3 chargePosition;
+    public float range = 9;
 
     void Update()
     {
-        if(ready)
+        if(ready && Vector2.Distance(transform.position, target.transform.position) < range)
         {
             if(name == "Particle System")
             {
@@ -42,13 +43,13 @@ public class EnemyFire : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        if(other.gameObject == target)
-        {
-            target.GetComponent<Health>().TakeDamage(1);
-        }
-    }
+    //private void OnParticleCollision(GameObject other)
+    //{
+    //    if(other.gameObject == target)
+    //    {
+    //        target.GetComponent<Health>().TakeDamage(1);
+    //    }
+    //}
 
     IEnumerator ManualAttackDelay(float x)
     {

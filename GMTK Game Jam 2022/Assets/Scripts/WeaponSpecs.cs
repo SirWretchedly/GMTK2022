@@ -15,7 +15,7 @@ public class WeaponSpecs : MonoBehaviour
             ParticleSystem.ShapeModule s = GetComponent<ParticleSystem>().shape;
             s.angle += mod/3;
         }
-        else if (gameObject.name == "Machine Gun")
+        else if (gameObject.name == "Machine Gun" || gameObject.name == "Lightning")
         {
             GetComponent<ParticleSystem>().emissionRate += mod;
         }
@@ -32,6 +32,10 @@ public class WeaponSpecs : MonoBehaviour
         {
             ParticleSystem.EmissionModule e = GetComponent<ParticleSystem>().emission;
             e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 15));
+        }
+        else if(gameObject.name == "Blank")
+        {
+            
         }
         else
         {

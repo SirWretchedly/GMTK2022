@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
         detectBlocks = GetComponentsInChildren<DetectBlock>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        target = transform.position;
     }
 
     void Update()
@@ -54,13 +55,13 @@ public class PlayerController : MonoBehaviour
                 target = transform.position;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * 5);
+        transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * 6);
     }
 
     IEnumerator Delay()
     {
         ready = false;
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.2f);
         ready = true;
     }
 }
