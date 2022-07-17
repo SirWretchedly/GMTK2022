@@ -11,6 +11,7 @@ TagManager:
   - RollingDown
   - RollingRight
   - Enemy
+  - Die
   layers:
   - Default
   - TransparentFX

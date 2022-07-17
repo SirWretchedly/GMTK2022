@@ -1488,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715119625074972391, guid: 9696f0ad959bfd44497e9b7fa04b27c6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6793137335760424020, guid: 9696f0ad959bfd44497e9b7fa04b27c6, type: 3}
       propertyPath: target
@@ -3078,6 +3078,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7608170503059297774, guid: 0ca65f8497b194340beb107f0bd215f5, type: 3}
       propertyPath: m_Name
+      value: Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608170503059297774, guid: 0ca65f8497b194340beb107f0bd215f5, type: 3}
+      propertyPath: m_TagString
       value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 7608170503059297775, guid: 0ca65f8497b194340beb107f0bd215f5, type: 3}
