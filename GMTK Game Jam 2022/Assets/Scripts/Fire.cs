@@ -17,6 +17,8 @@ public class Fire : MonoBehaviour
         foreach (ParticleSystem p in particleses)
             if (p.GetComponentInParent<SpriteRenderer>().enabled == true)
                 particles = p;
+        
+        AudioSource audio = particles.gameObject.GetComponent<AudioSource>();
 
         if (key == "up")
             particles.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -26,12 +28,12 @@ public class Fire : MonoBehaviour
             particles.transform.rotation = Quaternion.Euler(0, 90, 0);
         else if (key == "down")
             particles.transform.rotation = Quaternion.Euler(90, 0, 0);
-
         
         if(particles.name == "Rocket Launcher")
         {
             if (Input.GetKey(key) && ready)
             {
+                audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1.5f));
             }
@@ -40,6 +42,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
+                audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1));
             }
@@ -48,6 +51,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
+                audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0.5f));
             }
@@ -56,6 +60,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
+                audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0.3f));
             }
@@ -64,18 +69,39 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
+                audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1.5f));
             }
         }
+        else if(particles.name == "Lightning")
+        {
+            print("poop");
+            if (Input.GetKey(key) && ready)
+            {
+                audio.Play();
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(0f));
+            }
+            else if (!Input.GetKey(key))
+            {
+                audio.Stop();
+                particles.Stop();
+            }
+        }
         else
         {
-            if (Input.GetKey(key))
+            if (Input.GetKey(key) && ready)
             {
-                particles.enableEmission = true;
+                audio.Play();
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(0f));
             }
-            else
-                particles.enableEmission = false;
+            else if(!Input.GetKey(key))
+            {
+                audio.Stop();
+                particles.Stop();
+            }
         }
     }
 

@@ -8,6 +8,8 @@ public class EmenyHealth : MonoBehaviour
 
     private bool ready = true;
 
+    public GameObject text;
+
     private void OnParticleCollision(GameObject other)
     {
         if(ready)
@@ -21,6 +23,12 @@ public class EmenyHealth : MonoBehaviour
     {
         ready = false;
         health -= damage;
+        if (transform.name == "King" && health <= 0)
+        {
+            text.SetActive(true);
+            Destroy(transform.gameObject);
+        }
+            
         if (health <= 0)
             Destroy(transform.gameObject);
         yield return new WaitForSeconds(0.1f);

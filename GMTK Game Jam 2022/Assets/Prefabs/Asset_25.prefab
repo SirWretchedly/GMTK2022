@@ -92,11 +92,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 753491334240825842, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: damage
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 753491334240825842, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: upgraded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1606948645167695699, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: EmissionModule.enabled
@@ -104,7 +104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1606948645167695699, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1606948645167695724, guid: b4a3b7717f6354e45b04ba0b83fb70d5, type: 3}
       propertyPath: m_RootOrder

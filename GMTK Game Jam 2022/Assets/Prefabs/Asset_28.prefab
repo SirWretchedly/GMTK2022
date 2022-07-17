@@ -156,15 +156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.4000001
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: damage
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: upgraded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}

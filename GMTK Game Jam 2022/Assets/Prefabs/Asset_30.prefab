@@ -147,6 +147,10 @@ PrefabInstance:
       value: Lightning
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -164,6 +168,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
       propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
+      propertyPath: useRigidbodyForVelocity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
