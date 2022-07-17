@@ -105,6 +105,10 @@ public class RollingController : MonoBehaviour
         right = GameObject.FindWithTag("RollingRight").GetComponent<RollingSlot>();
     }
 
+    public void UpdateSprite() {
+        spriteRenderer.sprite = special.GetComponent<SpriteRenderer>().sprite;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("s") && !detectBlocks[2].isBlocked)

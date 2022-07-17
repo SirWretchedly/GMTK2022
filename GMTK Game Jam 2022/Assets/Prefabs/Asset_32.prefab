@@ -192,10 +192,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: ShapeModule.angle
       value: 13
       objectReference: {fileID: 0}
