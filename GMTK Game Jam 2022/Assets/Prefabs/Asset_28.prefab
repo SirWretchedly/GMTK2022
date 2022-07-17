@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: ShapeModule.angle
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: ShapeModule.radius.value
@@ -152,10 +152,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.4000001
+      value: 1.4000001
       objectReference: {fileID: 0}
     - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
+      propertyPath: upgraded
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

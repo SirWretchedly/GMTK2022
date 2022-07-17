@@ -10,9 +10,19 @@ public class Health : MonoBehaviour
 
     private bool dead = false;
 
+    public Vector2 checkPointPos;
+
     private void Start()
     {
         animator = GameObject.Find("Health").GetComponent<Animator>();
+        checkPointPos = new Vector2(1.5f, -2.5f);
+    }
+
+    private void UseCheckpoint() {
+        transform.position = checkPointPos;
+        GetComponent<PlayerController>().target = checkPointPos;
+        dead = false;
+        health = 6;
     }
 
     private void Update()
@@ -20,7 +30,6 @@ public class Health : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             StartCoroutine(ToggleTrueAndFalse(0.01f, "damage"));
-
         }
 
         if (Input.GetKeyDown("i"))
@@ -38,6 +47,7 @@ public class Health : MonoBehaviour
         {
             /// careful danger zone health is negative without health = 0 here
             dead = true;
+            UseCheckpoint();
         }
     }
 

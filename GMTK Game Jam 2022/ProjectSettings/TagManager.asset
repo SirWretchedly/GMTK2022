@@ -11,6 +11,12 @@ TagManager:
   - RollingDown
   - RollingRight
   - Enemy
+  - HealthUp
+  - Upgrade
+  - Die
+  - Pickup
+  - ToBeDeleted
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

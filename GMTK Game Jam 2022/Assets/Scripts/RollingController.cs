@@ -7,6 +7,7 @@ public class RollingController : MonoBehaviour
     public List<GameObject> stiva1 = new List<GameObject>();
     public List<GameObject> stiva2 = new List<GameObject>();
     public GameObject special;
+    public GameObject specialjos;
 
     SpriteRenderer spriteRenderer;
 
@@ -21,23 +22,33 @@ public class RollingController : MonoBehaviour
     {
         if (stiva == 1)
         {
-            GameObject x = stiva1[0];
+            /*GameObject x = stiva1[0];
             stiva1.RemoveAt(0);
             stiva1.Add(x);
             GameObject y = stiva1[0];
             stiva1.RemoveAt(0);
             stiva1.Insert(0, special);
-            special = y;
+            special = y;*/
+            GameObject x = specialjos;
+            specialjos = stiva1[0];
+            stiva1[0] = special;
+            special = stiva1[1];
+            stiva1[1] = x;
         }
         else
         {
-            GameObject x = stiva2[0];
+            /*GameObject x = stiva2[0];
             stiva2.RemoveAt(0);
             stiva2.Add(x);
             GameObject y = stiva2[0];
             stiva2.RemoveAt(0);
             stiva2.Insert(0, special);
-            special = y;
+            special = y;*/
+            GameObject x = specialjos;
+            specialjos = stiva2[0];
+            stiva2[0] = special;
+            special = stiva2[1];
+            stiva2[1] = x;
         }
     }
 
@@ -45,23 +56,34 @@ public class RollingController : MonoBehaviour
     {
         if (stiva == 1)
         {
-            GameObject x = stiva1[0];
+            /*GameObject x = stiva1[0];
             stiva1.RemoveAt(0);
             stiva1.Insert(0, special);
             special = x;
             GameObject y = stiva1[stiva1.Count - 1];
             stiva1.RemoveAt(stiva1.Count - 1);
-            stiva1.Insert(0, y);
+            stiva1.Insert(0, y);*/
+            GameObject x = specialjos;
+            specialjos = stiva1[1];
+            stiva1[1] = special;
+            special = stiva1[0];
+            stiva1[0] = x;
+
         }
         else
         {
-            GameObject x = stiva2[0];
+            /*GameObject x = stiva2[0];
             stiva2.RemoveAt(0);
             stiva2.Insert(0, special);
             special = x;
             GameObject y = stiva2[stiva2.Count - 1];
             stiva2.RemoveAt(stiva2.Count - 1);
-            stiva2.Insert(0, y);
+            stiva2.Insert(0, y);*/
+            GameObject x = specialjos;
+            specialjos = stiva2[1];
+            stiva2[1] = special;
+            special = stiva2[0];
+            stiva2[0] = x;
         }
     }
 
@@ -81,6 +103,10 @@ public class RollingController : MonoBehaviour
         down = GameObject.FindWithTag("RollingDown").GetComponent<RollingSlot>();
         left = GameObject.FindWithTag("RollingLeft").GetComponent<RollingSlot>();
         right = GameObject.FindWithTag("RollingRight").GetComponent<RollingSlot>();
+    }
+
+    public void UpdateSprite() {
+        spriteRenderer.sprite = special.GetComponent<SpriteRenderer>().sprite;
     }
 
     void Update()
