@@ -13,9 +13,15 @@ public class EnemyFire : MonoBehaviour
     public Vector3 chargePosition;
     public float range = 9;
 
+    private void Awake()
+    {
+        target = GetComponent<Enemy_Movement>().Player.gameObject;
+    }
+
     void Update()
     {
-        if(ready && Vector2.Distance(transform.position, target.transform.position) < range)
+        target = GetComponent<Enemy_Movement>().Player.gameObject;
+        if (ready && Vector2.Distance(transform.position, target.transform.position) < range)
         {
             if(name == "Particle System")
             {
