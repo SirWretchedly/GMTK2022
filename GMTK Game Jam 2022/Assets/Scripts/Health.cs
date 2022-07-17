@@ -15,12 +15,12 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        //animator = GameObject.Find("Health").GetComponent<Animator>();
+        animator = GameObject.Find("Health").GetComponent<Animator>();
     }
 
     private void Update()
     {
-        text.text = health.ToString();
+        //text.text = health.ToString();
 
         if (Input.GetKeyDown("space"))
         {
@@ -38,8 +38,8 @@ public class Health : MonoBehaviour
     {
         if(ready)
         {
-            //animator.SetBool("heal", false);
-            //animator.SetBool("damage", true);
+            animator.SetBool("heal", false);
+            animator.SetBool("damage", true);
                 health -= damage;
         }
         
@@ -54,8 +54,8 @@ public class Health : MonoBehaviour
 
     public void Heal(float heal)
     {
-        //animator.SetBool("damage", false);
-        //animator.SetBool("heal", true);
+        animator.SetBool("damage", false);
+        animator.SetBool("heal", true);
         health += heal;
         if (health > 6)
             health = 6;
