@@ -95,10 +95,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6699ee68fee1fe4c883d7cb90f97d46, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -187,6 +187,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492940107974465187}
     m_Modifications:
+    - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
+      propertyPath: cullingMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: playOnAwake
       value: 0
