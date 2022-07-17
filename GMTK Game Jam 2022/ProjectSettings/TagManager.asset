@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - HealthUp
   - Upgrade
+  - Die
   layers:
   - Default
   - TransparentFX

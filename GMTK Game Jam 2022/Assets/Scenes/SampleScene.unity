@@ -1837,6 +1837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Die
       objectReference: {fileID: 0}
+    - target: {fileID: 7608170503059297774, guid: 0ca65f8497b194340beb107f0bd215f5, type: 3}
+      propertyPath: m_TagString
+      value: Die
+      objectReference: {fileID: 0}
     - target: {fileID: 7608170503059297775, guid: 0ca65f8497b194340beb107f0bd215f5, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }*/
+
     public Transform Player;
 
     public float speed = 0.5f;
@@ -69,7 +65,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider == Player)
+        if(collision.gameObject.tag == "Die")
         {
             Player.GetComponent<Health>().TakeDamage(1);
         }
