@@ -9,26 +9,23 @@ public class Health : MonoBehaviour
     private Animator animator;
 
     private bool dead = false;
-    private IEnumerator coroutine;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GameObject.Find("Health").GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            coroutine = ToggleTrueAndFalse(0.01f, "damage");
-            StartCoroutine(coroutine);
+            StartCoroutine(ToggleTrueAndFalse(0.01f, "damage"));
 
         }
 
         if (Input.GetKeyDown("i"))
         {
-            coroutine = ToggleTrueAndFalse(0.01f, "heal");
-            StartCoroutine(coroutine);
+            StartCoroutine(ToggleTrueAndFalse(0.01f, "heal"));
         }
     }
 
@@ -53,7 +50,7 @@ public class Health : MonoBehaviour
             health = 6;
     }
 
-    private IEnumerator ToggleTrueAndFalse(float waitTime, string param)
+    public IEnumerator ToggleTrueAndFalse(float waitTime, string param)
     {
         if(param == "damage")
         {

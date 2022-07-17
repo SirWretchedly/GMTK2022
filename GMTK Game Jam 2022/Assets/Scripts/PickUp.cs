@@ -5,18 +5,20 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject image;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(this.name == "HealthUp")
         {
-            player.GetComponent<Health>().Heal(1);
+            StartCoroutine(player.GetComponent<Health>().ToggleTrueAndFalse(0.01f, "heal"));
             Destroy(transform.gameObject);
         }
 
         if(this.name == "Upgrade")
         {
-            player.transform.Find("Middle").GetComponent<RollingController>().stiva1[1].GetComponent<RollingSlot>().currentItem.GetComponent<ParticleSystem>().emissionRate += 0.5f;
+            image.SetActive(true);
+            player.GetComponent<ChoseUpgrade>().active = true;
             Destroy(transform.gameObject);
         }
     }
