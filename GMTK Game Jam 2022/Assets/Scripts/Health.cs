@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     private Animator animator;
     public Text text;
 
+    public Vector2 checkPointPos;
+
     private bool dead = false;
     private bool ready = true;
 
@@ -47,7 +49,7 @@ public class Health : MonoBehaviour
             /// careful danger zone health is negative without health = 0 here
             dead = true;
             health = 6;
-            transform.position = new Vector2(1.5f, -2.5f);
+            UseCheckpoint();
         }
     }
 
@@ -79,5 +81,13 @@ public class Health : MonoBehaviour
         ready = false;
         yield return new WaitForSeconds(0.2f);
         ready = true;
+    }
+
+    private void UseCheckpoint()
+    {
+        transform.position = checkPointPos;
+        GetComponent<PlayerController>().target = checkPointPos;
+        dead = false;
+        health = 6;
     }
 }

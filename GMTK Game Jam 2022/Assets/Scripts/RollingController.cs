@@ -169,4 +169,9 @@ public class RollingController : MonoBehaviour
         if(child != null)
             Destroy(child.gameObject);
     }
+
+    public void UpdateSprite()
+    {
+        spriteRenderer.sprite = special.GetComponent<SpriteRenderer>().sprite;
+    }
 }

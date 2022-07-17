@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private DetectBlock[] detectBlocks;
     private Animator animator;
     private SpriteRenderer sprite;
-    private Vector2 target;
+    public Vector2 target;
     private bool ready = true;
 
     private void Start()
