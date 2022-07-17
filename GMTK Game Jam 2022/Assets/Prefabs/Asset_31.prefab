@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
       propertyPath: ShapeModule.angle
-      value: 0.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
       propertyPath: TrailModule.enabled
@@ -408,7 +408,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434108970213531109, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
       propertyPath: damage
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434108970213531109, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}
+      propertyPath: upgraded
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b024ffed8c224d8d9ee851fb898b1, type: 3}

@@ -26,7 +26,6 @@ public class Fire : MonoBehaviour
             particles.transform.rotation = Quaternion.Euler(0, 90, 0);
         else if (key == "down")
             particles.transform.rotation = Quaternion.Euler(90, 0, 0);
-
         
         if(particles.name == "Rocket Launcher")
         {
@@ -68,14 +67,30 @@ public class Fire : MonoBehaviour
                 StartCoroutine(ManualAttackDelay(1.5f));
             }
         }
+        else if(particles.name == "Lightning")
+        {
+            print("poop");
+            if (Input.GetKey(key) && ready)
+            {
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(0f));
+            }
+            else if (!Input.GetKey(key))
+            {
+                particles.Stop();
+            }
+        }
         else
         {
-            if (Input.GetKey(key))
+            if (Input.GetKey(key) && ready)
             {
-                particles.enableEmission = true;
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(0f));
             }
-            else
-                particles.enableEmission = false;
+            else if(!Input.GetKey(key))
+            {
+                particles.Stop();
+            }
         }
     }
 

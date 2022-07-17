@@ -15,7 +15,7 @@ public class EnemyFire : MonoBehaviour
 
     void Update()
     {
-        if(ready && Vector2.Distance(transform.position, target.transform.position) < range)
+        if (ready && Vector2.Distance(transform.position, target.transform.position) < range)
         {
             if(name == "Particle System")
             {
