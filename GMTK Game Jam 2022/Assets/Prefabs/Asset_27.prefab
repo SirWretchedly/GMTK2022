@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8855098578501584085}
   - component: {fileID: 5978336132227072197}
-  - component: {fileID: 4169340525858390166}
   m_Layer: 0
   m_Name: Asset_27
   m_TagString: Untagged
@@ -84,19 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4169340525858390166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4236143071393442958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754c305d9f65dff409d7a746881db8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 1781965702762786441, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
 --- !u!1001 &7999561273742337432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,16 +139,20 @@ PrefabInstance:
       value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.m_BurstCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].cycleCount
@@ -190,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 17
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].countCurve.scalar
@@ -386,7 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2069029126626116181, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: damage
-      value: 6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069029126626116181, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
+      propertyPath: upgraded
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}

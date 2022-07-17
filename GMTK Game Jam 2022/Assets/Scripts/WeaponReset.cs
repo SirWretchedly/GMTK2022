@@ -9,11 +9,76 @@ public class WeaponReset : MonoBehaviour
     {
         if(Input.GetKeyDown("o"))
         {
-            foreach(Transform child in transform)
+            if(GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().upgraded == true)
             {
-                Destroy(child.gameObject);
+                GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().upgraded = false;
             }
-            //Instantiate(weapon, transform);
+
+            if (GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().upgraded == true)
+            {
+                GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+            }
+
+
+            if (GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().upgraded == true)
+            {
+                GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+            }
+
+            if (GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().upgraded == true)
+            {
+                GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+            }
+
+
+            if (GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().upgraded == true)
+            {
+                GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+            }
+
+
+            if (GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().upgraded == true)
+            {
+                GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().damage -= 1;
+                GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().RateOfFire(-30);
+                GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+            }
         }
+        /*if (Input.GetKeyDown("o"))
+        {
+            GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().special.GetComponentInChildren<WeaponSpecs>().upgraded = false;
+
+            GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().stiva1[0].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+
+            GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().stiva1[1].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+
+            GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().stiva1[2].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+
+            GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().stiva2[0].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+
+            GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().damage += 1;
+            GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().RateOfFire(30);
+            GetComponentInChildren<RollingController>().stiva2[1].GetComponentInChildren<WeaponSpecs>().upgraded = false;
+        }*/
     }
 }

@@ -33,6 +33,7 @@ public class Explode : MonoBehaviour
             exploded = Instantiate(explosion);
             exploded.transform.position = collisionEvents[0].intersection;
             exploded.GetComponent<ParticleSystem>().Play();
+            StartCoroutine(WaitAndKill(exploded));
         }
     }
 

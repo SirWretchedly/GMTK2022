@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 654897390617988416}
   - component: {fileID: 4532849809861768982}
-  - component: {fileID: 720759688845910692}
   m_Layer: 0
   m_Name: Asset_28
   m_TagString: Untagged
@@ -84,19 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &720759688845910692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764083262261611323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754c305d9f65dff409d7a746881db8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 604318899613842, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
 --- !u!1001 &7770514509035287524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,8 +139,12 @@ PrefabInstance:
       value: Flamethrower
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 60.0001
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -162,11 +152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 4.4
+      value: 0.4000001
       objectReference: {fileID: 0}
     - target: {fileID: 1574366121421173479, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: damage
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}

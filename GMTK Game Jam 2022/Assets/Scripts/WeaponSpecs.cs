@@ -11,21 +11,34 @@ public class WeaponSpecs : MonoBehaviour
     {
         if(gameObject.name == "Flamethrower")
         {
-            GetComponent<ParticleSystem>().startLifetime += 2;
+            GetComponent<ParticleSystem>().startLifetime += mod/30;
+            ParticleSystem.ShapeModule s = GetComponent<ParticleSystem>().shape;
+            s.angle += mod/3;
         }
-        if (gameObject.name == "Machine Gun" || gameObject.name == "Laser")
+        else if (gameObject.name == "Machine Gun")
         {
             GetComponent<ParticleSystem>().emissionRate += mod;
         }
+        else if(gameObject.name == "Laser")
+        {
+            GetComponent<ParticleSystem>().startSize += mod/15;
+        }
         else if(gameObject.name == "Shotgun")
         {
+            ParticleSystem.ShapeModule s = GetComponent<ParticleSystem>().shape;
+            s.angle += mod / 2;
+        }
+        else if(gameObject.name == "Grenade Launcher")
+        {
             ParticleSystem.EmissionModule e = GetComponent<ParticleSystem>().emission;
-            e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 10));
+            e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 15));
         }
         else
         {
+            ParticleSystem.ShapeModule s = GetComponent<ParticleSystem>().shape;
+            s.angle += mod / 6;
             ParticleSystem.EmissionModule e = GetComponent<ParticleSystem>().emission;
-            e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 50));
+            e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 15));
         }
 
         upgraded = true;

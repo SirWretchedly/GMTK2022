@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8976989908354149157}
   - component: {fileID: 6899000090811476141}
-  - component: {fileID: 1282394999345702531}
   m_Layer: 0
   m_Name: Asset_26
   m_TagString: Untagged
@@ -84,19 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1282394999345702531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2657840006651081761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754c305d9f65dff409d7a746881db8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 6420479347929336887, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
 --- !u!1001 &5598535149294026693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3484384334308979116, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: damage
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6420479347929336884, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: EmissionModule.enabled
@@ -114,7 +100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420479347929336884, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420479347929336886, guid: 8c8efdc0e37a2254cbef1aa8a9fe33a7, type: 3}
       propertyPath: m_RootOrder
