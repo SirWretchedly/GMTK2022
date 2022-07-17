@@ -91,6 +91,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1492940107974465187}
     m_Modifications:
     - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: ShapeModule.angle
       value: 10
       objectReference: {fileID: 0}

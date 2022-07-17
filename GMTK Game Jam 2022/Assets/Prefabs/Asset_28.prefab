@@ -139,6 +139,10 @@ PrefabInstance:
       value: Flamethrower
       objectReference: {fileID: 0}
     - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604318899613847, guid: 23b3e7c68554229438d0c427c237f21c, type: 3}
       propertyPath: ShapeModule.angle
       value: 10
       objectReference: {fileID: 0}

@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  charge: 0
+  chargePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &3089292498733347156
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,8 +224,8 @@ GameObject:
   - component: {fileID: 4715119625074972385}
   - component: {fileID: 4715119625074972384}
   - component: {fileID: 4715119625074972386}
-  - component: {fileID: 4715119625074972380}
   - component: {fileID: 3964822093986487614}
+  - component: {fileID: 4472215184678840984}
   m_Layer: 8
   m_Name: Rook
   m_TagString: Enemy
@@ -286,7 +288,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -5793913985548570082, guid: 674802a7191bcd241a17b81853e845c5, type: 3}
   m_Color: {r: 0.5377358, g: 0.2967693, b: 0.2967693, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -310,23 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  speed: 0.5
   SpaceBetween: 0.5
---- !u!58 &4715119625074972380
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4715119625074972391}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  rotationSpeed: 0
 --- !u!114 &3964822093986487614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +328,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+--- !u!70 &4472215184678840984
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715119625074972391}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.037605315, y: -0.04354298}
+  m_Size: {x: 0.94478935, y: 1.569994}
+  m_Direction: 0
 --- !u!1 &5854948209696868356
 GameObject:
   m_ObjectHideFlags: 0
