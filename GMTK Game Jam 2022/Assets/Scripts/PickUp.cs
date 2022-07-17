@@ -16,6 +16,13 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (weapon != null && weapon.name == "Asset_23")
+            Destroy(gameObject);
+        //GetComponent<Collider2D>().enabled = false;
+    }
+
     void Start()
     {
         UpdateSprite();
@@ -23,37 +30,50 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.tag == "HealthUp")
+        if(collision.tag == "Die")
         {
-            print("HEALTH");
-            StartCoroutine(player.GetComponent<Health>().ToggleTrueAndFalse(0.01f, "heal"));
-            Destroy(transform.gameObject);
-        }
-
-        if (this.tag == "Checkpoint")
-        {
-            print("Checkpoint");
-            player.GetComponent<Health>().checkPointPos = transform.position;
-        }
-
-        if (player.GetComponent<ChoseUpgrade>().active == false &&
-        player.GetComponent<ChoseWeapon>().isActive == false)
-        {
-
-            if (this.tag == "Upgrade")
+            if (this.tag == "HealthUp")
             {
-                image.SetActive(true);
-                player.GetComponent<ChoseUpgrade>().active = true;
+                print("HEALTH");
+                StartCoroutine(player.GetComponent<Health>().ToggleTrueAndFalse(0.01f, "heal"));
                 Destroy(transform.gameObject);
             }
 
-            if (this.tag == "Pickup")
+            if (this.tag == "Checkpoint")
             {
-                player.GetComponent<ChoseWeapon>().isActive = true;
-                player.GetComponent<ChoseWeapon>().SetColliderObject(transform.gameObject);
-                this.tag = "ToBeDeleted";
-                image.SetActive(true);
+                print("Checkpoint");
+                player.GetComponent<Health>().checkPointPos = transform.position;
+            }
+
+            if (player.GetComponent<ChoseUpgrade>().active == false &&
+            player.GetComponent<ChoseWeapon>().isActive == false)
+            {
+
+                if (this.tag == "Upgrade")
+                {
+                    image.SetActive(true);
+                    player.GetComponent<ChoseUpgrade>().active = true;
+                    Destroy(transform.gameObject);
+                }
+
+                if (this.tag == "Pickup")
+                {
+                    player.GetComponent<ChoseWeapon>().isActive = true;
+                    player.GetComponent<ChoseWeapon>().SetColliderObject(transform.gameObject);
+                    this.tag = "ToBeDeleted";
+                    image.SetActive(true);
+                }
             }
         }
+
+        
+
     }
+    public IEnumerator poop()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(1);
+        GetComponent<Collider2D>().enabled = true;
+    }
+
 }

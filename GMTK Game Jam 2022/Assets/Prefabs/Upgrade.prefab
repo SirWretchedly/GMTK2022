@@ -266,7 +266,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!114 &8633540880267904723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   image: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!1 &8633540881469755809
 GameObject:
   m_ObjectHideFlags: 0

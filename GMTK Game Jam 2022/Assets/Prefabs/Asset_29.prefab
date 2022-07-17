@@ -108,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 93778856076498116, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: TrailModule.widthOverTrail.maxCurve.m_Curve.Array.data[1].value
@@ -164,11 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6938778298814885641, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: damage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6938778298814885641, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}
       propertyPath: upgraded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52564a9ee9181b043996c3c3657bec8b, type: 3}

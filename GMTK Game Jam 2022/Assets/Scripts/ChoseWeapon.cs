@@ -22,6 +22,7 @@ public class ChoseWeapon : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && isActive == true)
         {
+            StartCoroutine(colliderObject.GetComponent<PickUp>().poop());
             print("Instantiated");
 
             GameObject colliderCopy = GameObject.Instantiate(colliderObject);

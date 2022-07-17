@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: ShapeModule.angle
-      value: 20
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1781965702762786445, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: EmissionModule.enabled
@@ -376,11 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2069029126626116181, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: damage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2069029126626116181, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}
       propertyPath: upgraded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099a72f08973d03419baaf7623ccb2fb, type: 3}

@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
     public float health = 6;
 
-    private Animator animator;
+    //private Animator animator;
     public Text text;
 
     public Vector2 checkPointPos;
@@ -17,30 +17,31 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        animator = GameObject.Find("Health").GetComponent<Animator>();
+        //animator = GameObject.Find("Health").GetComponent<Animator>();
+        checkPointPos = new Vector2(1.5f, -2.5f);
     }
 
     private void Update()
     {
-        //text.text = health.ToString();
+        text.text = health.ToString();
 
         //if (Input.GetKeyDown("space"))
         //{
         //    StartCoroutine(ToggleTrueAndFalse(0.01f, "damage"));
         //}
 
-        if (Input.GetKeyDown("i"))
-        {
-            StartCoroutine(ToggleTrueAndFalse(0.01f, "heal"));
-        }
+        //if (Input.GetKeyDown("i"))
+        //{
+        //    StartCoroutine(ToggleTrueAndFalse(0.01f, "heal"));
+        //}
     }
 
     public void TakeDamage(float damage)
     {
         if(ready)
         {
-            animator.SetBool("heal", false);
-            animator.SetBool("damage", true);
+            //animator.SetBool("heal", false);
+            //animator.SetBool("damage", true);
                 health -= damage;
         }
         
@@ -55,8 +56,8 @@ public class Health : MonoBehaviour
 
     public void Heal(float heal)
     {
-        animator.SetBool("damage", false);
-        animator.SetBool("heal", true);
+        //animator.SetBool("damage", false);
+        //animator.SetBool("heal", true);
         health += heal;
         if (health > 6)
             health = 6;
