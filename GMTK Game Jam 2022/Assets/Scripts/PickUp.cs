@@ -9,13 +9,13 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(this.name == "HealthUp")
+        if(this.tag == "HealthUp")
         {
             StartCoroutine(player.GetComponent<Health>().ToggleTrueAndFalse(0.01f, "heal"));
             Destroy(transform.gameObject);
         }
 
-        if(this.name == "Upgrade")
+        if(this.tag == "Upgrade")
         {
             image.SetActive(true);
             player.GetComponent<ChoseUpgrade>().active = true;

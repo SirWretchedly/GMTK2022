@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7608170502164186564}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7608170502749381410}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!61 &7608170502164186567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,12 +121,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stiva1:
   - {fileID: 4236143071393442958, guid: a4a2e411180c062498b31fff45cd69ac, type: 3}
-  - {fileID: 2657840006651081761, guid: 0b8cf3aefec43294886de254341b1da3, type: 3}
   - {fileID: 1764083262261611323, guid: 61daea17681a46f4fbcdb9d06582ba70, type: 3}
   stiva2:
   - {fileID: 5249488838238559448, guid: cbeb27d818f5f454481a1cc8771c400f, type: 3}
   - {fileID: 8773278095152208798, guid: c475f0b6f6c6851449250b0800535067, type: 3}
   special: {fileID: 5906933523830488212, guid: 4d01042b935e066438703b714a6dd7bc, type: 3}
+  specialjos: {fileID: 2657840006651081761, guid: 0b8cf3aefec43294886de254341b1da3, type: 3}
   detectBlocks:
   - {fileID: 7608170503421008351}
   - {fileID: 7608170502608735956}
@@ -702,7 +702,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.296, y: 1.2964497}
+    oldSize: {x: 0.996923, y: 0.997269}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

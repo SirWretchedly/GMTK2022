@@ -52,6 +52,22 @@ public class Fire : MonoBehaviour
                 StartCoroutine(ManualAttackDelay(0.5f));
             }
         }
+        else if (particles.name == "Gun")
+        {
+            if (Input.GetKey(key) && ready)
+            {
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(0.3f));
+            }
+        }
+        else if (particles.name == "Sniper")
+        {
+            if (Input.GetKey(key) && ready)
+            {
+                particles.Play();
+                StartCoroutine(ManualAttackDelay(1.5f));
+            }
+        }
         else
         {
             if (Input.GetKey(key))

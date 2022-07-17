@@ -11,6 +11,8 @@ TagManager:
   - RollingDown
   - RollingRight
   - Enemy
+  - HealthUp
+  - Upgrade
   layers:
   - Default
   - TransparentFX
