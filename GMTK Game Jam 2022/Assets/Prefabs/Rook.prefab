@@ -131,6 +131,7 @@ MonoBehaviour:
   target: {fileID: 0}
   charge: 0
   chargePosition: {x: 0, y: 0, z: 0}
+  range: 9
 --- !u!1 &3089292498733347156
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +227,7 @@ GameObject:
   - component: {fileID: 4715119625074972386}
   - component: {fileID: 3964822093986487614}
   - component: {fileID: 4472215184678840984}
+  - component: {fileID: 6043712860018114075}
   m_Layer: 8
   m_Name: Rook
   m_TagString: Enemy
@@ -313,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   speed: 0.5
+  vision: 9
   SpaceBetween: 0.5
   rotationSpeed: 0
 --- !u!114 &3964822093986487614
@@ -344,6 +347,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.037605315, y: -0.04354298}
   m_Size: {x: 0.94478935, y: 1.569994}
   m_Direction: 0
+--- !u!50 &6043712860018114075
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715119625074972391}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &5854948209696868356
 GameObject:
   m_ObjectHideFlags: 0

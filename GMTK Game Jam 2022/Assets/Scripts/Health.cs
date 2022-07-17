@@ -22,11 +22,10 @@ public class Health : MonoBehaviour
     {
         text.text = health.ToString();
 
-        if (Input.GetKeyDown("space"))
-        {
-            StartCoroutine(ToggleTrueAndFalse(0.01f, "damage"));
-
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    StartCoroutine(ToggleTrueAndFalse(0.01f, "damage"));
+        //}
 
         if (Input.GetKeyDown("i"))
         {
@@ -47,7 +46,7 @@ public class Health : MonoBehaviour
         {
             /// careful danger zone health is negative without health = 0 here
             dead = true;
-            health = 0;
+            health = 6;
             transform.position = new Vector2(1.5f, -2.5f);
         }
     }
@@ -72,7 +71,7 @@ public class Health : MonoBehaviour
             Heal(1);
         }
         yield return new WaitForSeconds(waitTime);
-        animator.SetBool(param, false);
+       // animator.SetBool(param, false);
     }
 
     public IEnumerator InvincibilityFrames()

@@ -33,6 +33,10 @@ public class WeaponSpecs : MonoBehaviour
             ParticleSystem.EmissionModule e = GetComponent<ParticleSystem>().emission;
             e.SetBurst(0, new ParticleSystem.Burst(e.GetBurst(0).time, e.GetBurst(0).count.constant + mod / 15));
         }
+        else if(gameObject.name == "Blank")
+        {
+            
+        }
         else
         {
             ParticleSystem.ShapeModule s = GetComponent<ParticleSystem>().shape;

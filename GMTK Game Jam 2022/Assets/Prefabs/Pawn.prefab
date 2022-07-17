@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   speed: 0.5
-  vision: 7
+  vision: 9
   SpaceBetween: 0.5
   rotationSpeed: 0
 --- !u!114 &3964822093986487614
