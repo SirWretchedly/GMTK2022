@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class RollingSlot : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
     public GameObject currentItem;
+    public string key;
 
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         GameObject current = Instantiate(currentItem, transform);
-    }
-
-    void Update()
-    {
-
     }
 }

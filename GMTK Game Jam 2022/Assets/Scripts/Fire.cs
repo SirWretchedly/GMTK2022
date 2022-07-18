@@ -18,7 +18,7 @@ public class Fire : MonoBehaviour
             if (p.GetComponentInParent<SpriteRenderer>().enabled == true)
                 particles = p;
         
-        AudioSource audio = particles.gameObject.GetComponent<AudioSource>();
+        //AudioSource audio = particles.gameObject.GetComponent<AudioSource>();
 
         if (key == "up")
             particles.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -33,7 +33,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1.5f));
             }
@@ -42,7 +42,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1));
             }
@@ -51,7 +51,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0.5f));
             }
@@ -60,7 +60,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //udio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0.3f));
             }
@@ -69,7 +69,7 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(1.5f));
             }
@@ -79,13 +79,13 @@ public class Fire : MonoBehaviour
             print("poop");
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0f));
             }
             else if (!Input.GetKey(key))
             {
-                audio.Stop();
+                //audio.Stop();
                 particles.Stop();
             }
         }
@@ -93,13 +93,13 @@ public class Fire : MonoBehaviour
         {
             if (Input.GetKey(key) && ready)
             {
-                audio.Play();
+                //audio.Play();
                 particles.Play();
                 StartCoroutine(ManualAttackDelay(0f));
             }
             else if(!Input.GetKey(key))
             {
-                audio.Stop();
+                //audio.Stop();
                 particles.Stop();
             }
         }

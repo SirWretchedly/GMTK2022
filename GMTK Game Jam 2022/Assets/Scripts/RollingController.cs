@@ -94,6 +94,7 @@ public class RollingController : MonoBehaviour
             StartCoroutine(DeleteDelay(child));
         }
         GameObject current = Instantiate(x.currentItem, x.transform);
+        current.transform.position = x.transform.position;
     }
 
     void Start()
@@ -165,7 +166,7 @@ public class RollingController : MonoBehaviour
     {
         child.GetComponent<SpriteRenderer>().enabled = false;
         child.GetComponentInChildren<ParticleSystem>().enableEmission = false;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         if(child != null)
             Destroy(child.gameObject);
     }

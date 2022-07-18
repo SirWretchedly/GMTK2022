@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private DetectBlock[] detectBlocks;
+    public DetectBlock[] detectBlocks;
     private Animator animator;
     private SpriteRenderer sprite;
     public Vector2 target;
