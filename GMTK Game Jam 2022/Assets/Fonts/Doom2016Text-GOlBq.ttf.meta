@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Doom 2016 Text
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 17a8abef8f2f0cd40ac81a48f536d5a0, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

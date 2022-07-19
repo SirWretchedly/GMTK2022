@@ -22,7 +22,7 @@ public class WeaponPickUp : PickUps
 
                 if(drop.name != "Empty")
                 {
-                    weapon =
+
                 }
             }
         }

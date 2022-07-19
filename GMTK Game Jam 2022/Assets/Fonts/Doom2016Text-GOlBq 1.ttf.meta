@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 17a8abef8f2f0cd40ac81a48f536d5a0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Doom 2016 Text
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3e4bf11b3bcb8c04eb82b6e37c623d26, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
