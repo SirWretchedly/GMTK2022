@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6398859781572166178}
   - component: {fileID: 1537953445771756848}
   - component: {fileID: 8641209785144430316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4934,6 +4934,5 @@ MonoBehaviour:
   particles: {fileID: 0}
   speed: 0.7
   damageMod: 1
-  speedMod: 0.2
   angleMod: 10
   burstMod: 10
