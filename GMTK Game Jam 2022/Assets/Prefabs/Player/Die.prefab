@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 7608170503059297781}
   - component: {fileID: 754418108586982190}
   - component: {fileID: 4299366298409617417}
+  - component: {fileID: 226675855165575686}
   m_Layer: 3
   m_Name: Die
   m_TagString: Die
@@ -538,6 +539,22 @@ MonoBehaviour:
   maxHealth: 6
   invincibility: 0.3
   animator: {fileID: 0}
+--- !u!114 &226675855165575686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608170503059297774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c80de2ba400a0e448dfddcd4456d40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp: {fileID: 0}
+  pickUpInstance: {fileID: 8621931177965356061, guid: f6e2c1d51889c604982d4451d4d2e697, type: 3}
+  prompt: {fileID: 0}
+  empty: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
 --- !u!1 &7608170503263526912
 GameObject:
   m_ObjectHideFlags: 0

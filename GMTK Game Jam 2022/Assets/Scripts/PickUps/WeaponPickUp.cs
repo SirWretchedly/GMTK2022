@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WeaponPickUp : PickUps
 {
-    [SerializeField] private GameObject prompt;
-    [SerializeField] private GameObject weapon, drop, newWeapon;
+    public GameObject prompt, weapon;
+    [SerializeField] private GameObject drop, newWeapon;
     private bool active;
     private RollingController rollingController;
     private Collider2D collider2d;
@@ -47,7 +47,7 @@ public class WeaponPickUp : PickUps
 
         if(collider2d.enabled == false)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) > 0.5f)
+            if (Vector2.Distance(transform.position, player.transform.position) > 1)
                 collider2d.enabled = true;
         }
     }
