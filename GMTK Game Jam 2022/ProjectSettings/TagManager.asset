@@ -29,6 +29,8 @@ TagManager:
   - Enemy
   - PostProcessing
   - 
+  - Damage
+  - Detector
   - 
   - 
   - 

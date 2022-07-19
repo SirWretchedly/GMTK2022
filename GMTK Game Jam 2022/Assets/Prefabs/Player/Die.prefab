@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7608170502164186565}
   - component: {fileID: 7608170502164186567}
   - component: {fileID: 7608170502164186566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: South Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &7608170502164186566
 MonoBehaviour:
@@ -120,13 +120,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stiva1:
-  - {fileID: 3501983854552215875, guid: 64762fdd1a813dc42a916b7d61c4f54f, type: 3}
-  - {fileID: 3501983854552215875, guid: a4024888f01701844bddf2f2e58ca96f, type: 3}
+  - {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
+  - {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   stiva2:
-  - {fileID: 3501983854552215875, guid: f68e9e6c882cdc5479716de7380e7437, type: 3}
-  - {fileID: 3501983854552215875, guid: 4203a6a596a6ebe498a1e9222fd8d594, type: 3}
-  special: {fileID: 3501983854552215875, guid: d7318c9965b62534caaf3bfd8aea2aa8, type: 3}
-  specialjos: {fileID: 3501983854552215875, guid: 501e7576836842044831ab9635dad377, type: 3}
+  - {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
+  - {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
+  special: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
+  specialjos: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   detectBlocks:
   - {fileID: 7608170503421008351}
   - {fileID: 7608170502608735956}
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1c131286c2d5932499c743345e33acb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37ed1da73471c5e409d067265ad563cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 7608170502608735954}
   - component: {fileID: 7608170502608735955}
   - component: {fileID: 7608170502608735956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: East Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -239,7 +239,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &7608170502608735956
 MonoBehaviour:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ee44f79d7345f4d93c5702bd817c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 3501983854552215875, guid: f68e9e6c882cdc5479716de7380e7437, type: 3}
+  currentItem: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   key: up
 --- !u!1 &7608170502966167471
 GameObject:
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ee44f79d7345f4d93c5702bd817c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 3501983854552215875, guid: 64762fdd1a813dc42a916b7d61c4f54f, type: 3}
+  currentItem: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   key: left
 --- !u!1 &7608170503059297774
 GameObject:
@@ -354,14 +354,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7608170503059297776}
   - component: {fileID: 7608170503059297775}
-  - component: {fileID: 7608170503059297777}
-  - component: {fileID: 7608170503059297778}
   - component: {fileID: 7608170503059297780}
-  - component: {fileID: 2380901030928974554}
   - component: {fileID: 7608170503059297779}
   - component: {fileID: 7608170503059297781}
-  - component: {fileID: 5450830589939334684}
-  m_Layer: 0
+  - component: {fileID: 754418108586982190}
+  - component: {fileID: 4299366298409617417}
+  m_Layer: 3
   m_Name: Die
   m_TagString: Die
   m_Icon: {fileID: 0}
@@ -438,35 +436,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7608170503059297777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7608170503059297774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2762376cad4b74c922ebc3b9320c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectBlocks: []
-  target: {x: 0, y: 0}
---- !u!114 &7608170503059297778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7608170503059297774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd45432c4a780d1489f6403a1473b3bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 6
-  text: {fileID: 0}
-  checkPointPos: {x: 0, y: 0}
 --- !u!61 &7608170503059297780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -493,21 +462,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2380901030928974554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7608170503059297774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd5d7584f4e0d645a6842848b9479aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  image: {fileID: 0}
-  colliderObject: {fileID: 0}
 --- !u!50 &7608170503059297779
 Rigidbody2D:
   serializedVersion: 4
@@ -548,7 +502,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5450830589939334684
+--- !u!114 &754418108586982190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,10 +511,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 7608170503059297774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754c305d9f65dff409d7a746881db8a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 42bc73478ce0643468b039dd4267d80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  speed: 3
+  blocks:
+  - {fileID: 7608170503421008351}
+  - {fileID: 7608170502608735956}
+  - {fileID: 7608170502164186566}
+  - {fileID: 7608170503727049901}
+--- !u!114 &4299366298409617417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608170503059297774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b261890db6d74f4c93f5e0a8891ea9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawn: {x: 0, y: 0}
+  health: 6
+  maxHealth: 6
+  invincibility: 0.3
+  animator: {fileID: 0}
 --- !u!1 &7608170503263526912
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ee44f79d7345f4d93c5702bd817c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 3501983854552215875, guid: 4203a6a596a6ebe498a1e9222fd8d594, type: 3}
+  currentItem: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   key: down
 --- !u!1 &7608170503421008349
 GameObject:
@@ -617,7 +594,7 @@ GameObject:
   - component: {fileID: 7608170503421008350}
   - component: {fileID: 7608170503421007904}
   - component: {fileID: 7608170503421008351}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: North Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +628,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -662,7 +639,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &7608170503421008351
 MonoBehaviour:
@@ -688,7 +665,7 @@ GameObject:
   - component: {fileID: 7608170503727049900}
   - component: {fileID: 7608170503727049902}
   - component: {fileID: 7608170503727049901}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: West Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +699,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0}
+  m_Offset: {x: -1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -733,7 +710,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &7608170503727049901
 MonoBehaviour:
@@ -791,5 +768,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ee44f79d7345f4d93c5702bd817c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 3501983854552215875, guid: a4024888f01701844bddf2f2e58ca96f, type: 3}
+  currentItem: {fileID: 3501983854552215875, guid: d32e5a4c4839a2340be61385c50cd547, type: 3}
   key: right

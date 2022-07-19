@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6398859781572166178}
   - component: {fileID: 1537953445771756848}
   - component: {fileID: 5234699454052372259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4870,8 +4870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  speed: 0
   upgraded: 1
-  ready: 0
   key: 
   particles: {fileID: 0}
