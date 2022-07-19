@@ -47,7 +47,7 @@ public class WeaponPickUp : PickUps
 
         if(collider2d.enabled == false)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) > 1)
+            if (Vector2.Distance(transform.position, player.transform.position) > 0.9)
                 collider2d.enabled = true;
         }
     }
